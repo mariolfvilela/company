@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Domain", "01 - Domain", "{7F0DE793-A80A-4D46-88AD-670B80915835}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allianz.Domain", "Allianz.Domain\Allianz.Domain.csproj", "{6534F8C6-0B11-474D-965A-684088ECD662}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allianz.Domain", "Allianz.Domain\Allianz.Domain.csproj", "{EA5285BA-3080-4152-B283-115F60DAD737}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Application", "03 - Application", "{CD608AD4-4FF0-4E94-9099-5EBEBFA7D932}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +13,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6534F8C6-0B11-474D-965A-684088ECD662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6534F8C6-0B11-474D-965A-684088ECD662}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6534F8C6-0B11-474D-965A-684088ECD662}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6534F8C6-0B11-474D-965A-684088ECD662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA5285BA-3080-4152-B283-115F60DAD737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA5285BA-3080-4152-B283-115F60DAD737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA5285BA-3080-4152-B283-115F60DAD737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA5285BA-3080-4152-B283-115F60DAD737}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{6534F8C6-0B11-474D-965A-684088ECD662} = {7F0DE793-A80A-4D46-88AD-670B80915835}
+		{EA5285BA-3080-4152-B283-115F60DAD737} = {7F0DE793-A80A-4D46-88AD-670B80915835}
 	EndGlobalSection
 EndGlobal
