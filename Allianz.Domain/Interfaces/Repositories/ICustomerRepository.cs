@@ -1,7 +1,7 @@
 ﻿using System;
-using Allianz.Domain.Entities;
+using Company.Domain.Entities;
 
-namespace Allianz.Domain.Interfaces.Repositories
+namespace Company.Domain.Interfaces.Repositories
 {
     public interface ICustomerRepository : IRepositoryBase<Customer>
     {

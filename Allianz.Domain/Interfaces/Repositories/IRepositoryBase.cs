@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Allianz.Domain.Common;
+using Company.Domain.Common;
 
-namespace Allianz.Domain.Interfaces.Repositories
+namespace Company.Domain.Interfaces.Repositories
 {
     /// <summary>
     /// Interface de repositório base.
