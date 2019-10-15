@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Allianz.Application.ViewModels
+namespace Company.Application.ViewModels
 {
     public class CustomerViewModel
     {

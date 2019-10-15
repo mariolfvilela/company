@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Allianz.Application.ViewModels;
-using Allianz.Domain.Interfaces.Repositories;
+using Company.Application.ViewModels;
+using Company.Domain.Interfaces.Repositories;
 using AutoMapper;
 
-namespace Allianz.Application.Services
+namespace Company.Application.Services
 {
     public class CustomerAppService
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Allianz.Domain.Interfaces.Services
+namespace Company.Domain.Interfaces.Services
 {
     public interface IServiceBase<TEntidade> : IDisposable
         where TEntidade : class

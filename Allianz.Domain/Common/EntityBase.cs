@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Allianz.Domain.Common
+namespace Company.Domain.Common
 {
     /// <summary>
     /// Entidade base.

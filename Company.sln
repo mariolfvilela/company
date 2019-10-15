@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Domain", "01 - Domain", "{7F0DE793-A80A-4D46-88AD-670B80915835}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allianz.Domain", "Allianz.Domain\Allianz.Domain.csproj", "{EA5285BA-3080-4152-B283-115F60DAD737}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Domain", "Allianz.Domain\Company.Domain.csproj", "{EA5285BA-3080-4152-B283-115F60DAD737}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Application", "03 - Application", "{CD608AD4-4FF0-4E94-9099-5EBEBFA7D932}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allianz.Application", "Allianz.Application\Allianz.Application.csproj", "{23D1E59C-0B8E-4614-B348-F38A94DB8078}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Application", "Allianz.Application\Company.Application.csproj", "{23D1E59C-0B8E-4614-B348-F38A94DB8078}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,9 +1,9 @@
 ﻿using System;
-using Allianz.Application.ViewModels;
-using Allianz.Domain.Entities;
+using Company.Application.ViewModels;
+using Company.Domain.Entities;
 using AutoMapper;
 
-namespace Allianz.Application.AutoMapper
+namespace Company.Application.AutoMapper
 {
     public class DomainToViewModelMappingProfile : Profile
     {

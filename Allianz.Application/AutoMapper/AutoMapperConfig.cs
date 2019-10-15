@@ -1,7 +1,7 @@
 ﻿using System;
 using AutoMapper;
 
-namespace Allianz.Application.AutoMapper
+namespace Company.Application.AutoMapper
 {
     public class AutoMapperConfig
     {

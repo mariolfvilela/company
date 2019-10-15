@@ -15,6 +15,6 @@
     <PackageReference Include="AutoMapper" Version="9.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Allianz.Domain\Allianz.Domain.csproj" />
+    <ProjectReference Include="..\Allianz.Domain\Company.Domain.csproj" />
   </ItemGroup>
 </Project>

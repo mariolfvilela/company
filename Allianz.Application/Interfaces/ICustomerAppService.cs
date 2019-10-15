@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using Allianz.Application.ViewModels;
+using Company.Application.Interfaces;
+using Company.Domain.Entities;
 
-namespace Allianz.Application.Interfaces
+namespace Company.Application.Interfaces
 {
-    public interface ICustomerAppService : IDisposable
+    public interface ICustomerAppService : IAppServicoBase<Customer, CustomerViewModel>
     {
-        void Register(CustomerViewModel customerViewModel);
-        IEnumerable<CustomerViewModel> GetAll();
-        CustomerViewModel GetById(Guid id);
-        void Update(CustomerViewModel customerViewModel);
-        void Remove(Guid id);
     }
 }

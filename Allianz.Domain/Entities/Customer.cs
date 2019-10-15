@@ -1,7 +1,7 @@
 ﻿using System;
-using Allianz.Domain.Common;
+using Company.Domain.Common;
 
-namespace Allianz.Domain.Entities
+namespace Company.Domain.Entities
 {
     public class Customer : EntityBase
     {

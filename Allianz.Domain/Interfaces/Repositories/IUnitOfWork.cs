@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Allianz.Domain.Interfaces.Repositories
+namespace Company.Domain.Interfaces.Repositories
 {
     public interface IUnitOfWork : IDisposable
     {
