@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allianz.Domain", "Allianz.D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Application", "03 - Application", "{CD608AD4-4FF0-4E94-9099-5EBEBFA7D932}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allianz.Application", "Allianz.Application\Allianz.Application.csproj", "{23D1E59C-0B8E-4614-B348-F38A94DB8078}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +19,13 @@ Global
 		{EA5285BA-3080-4152-B283-115F60DAD737}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA5285BA-3080-4152-B283-115F60DAD737}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA5285BA-3080-4152-B283-115F60DAD737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23D1E59C-0B8E-4614-B348-F38A94DB8078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23D1E59C-0B8E-4614-B348-F38A94DB8078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23D1E59C-0B8E-4614-B348-F38A94DB8078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23D1E59C-0B8E-4614-B348-F38A94DB8078}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EA5285BA-3080-4152-B283-115F60DAD737} = {7F0DE793-A80A-4D46-88AD-670B80915835}
+		{23D1E59C-0B8E-4614-B348-F38A94DB8078} = {CD608AD4-4FF0-4E94-9099-5EBEBFA7D932}
 	EndGlobalSection
 EndGlobal
