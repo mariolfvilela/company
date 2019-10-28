@@ -13,8 +13,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Allianz.Domain\Company.Domain.csproj" />
+    <ProjectReference Include="..\Company.Infra.Data\Company.Infra.Data.csproj" />
   </ItemGroup>
 </Project>

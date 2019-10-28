@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Company.Infra.CrossCutting.IoC
+namespace Company.Domain.Common
 {
     class Program
     {

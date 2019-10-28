@@ -3,33 +3,19 @@ using System.Collections.Generic;
 using Company.Application.ViewModels;
 using Company.Domain.Interfaces.Repositories;
 using AutoMapper;
+using Company.Domain.Common;
+using Company.Application.Interfaces;
+using Company.Domain.Interfaces.Services;
+using Company.Domain.Entities;
 
 namespace Company.Application.Services
 {
-    public class CustomerAppService
+    public class CustomerAppService : AppServiceBase<Customer, CustomerViewModel>, ICustomerAppService
     {
-        private readonly IMapper _mapper;
-        private readonly ICustomerRepository _customerRepository;
 
-        public CustomerAppService(IMapper mapper,
-                                  ICustomerRepository customerRepository)
+        public CustomerAppService(IMapper iMapper, ICustomerService service)
+            : base(iMapper, service)
         {
-            _mapper = mapper;
-            _customerRepository = customerRepository;
-        }
-
-        
-
-        public CustomerViewModel GetById(int id)
-        {
-            return _mapper.Map<CustomerViewModel>(_customerRepository.GetById(id));
-        }
-
-
-
-        public void Dispose()
-        {
-            GC.SuppressFinalize(this);
         }
     }
 }

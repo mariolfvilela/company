@@ -4,10 +4,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Company.Application.ViewModels
 {
-    public class CustomerViewModel
+    public class CustomerViewModel : ViewModelBase
     {
-        [Key]
-        public Guid Id { get; set; }
 
         [Required(ErrorMessage = "The Name is Required")]
         [MinLength(2)]

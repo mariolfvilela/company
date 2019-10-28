@@ -7,15 +7,14 @@ namespace Company.Infra.Data.Repository
 {
     public class CustomerRepository : RepositoryBase<Customer>, ICustomerRepository
     {
-        public CustomerRepository(CompanyContext context)
-            : base(context)
+        public CustomerRepository(ContextCompany contexto)
+            : base(contexto)
         {
-
         }
 
         public Customer GetByEmail(string email)
         {
-            return DbSet.AsNoTracking().FirstOrDefault(c => c.Email == email);
+            throw new NotImplementedException();
         }
     }
 }
