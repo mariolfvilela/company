@@ -8,7 +8,7 @@ using Company.Domain.Interfaces.Services;
 
 namespace Company.Application.Services
 {
-    public class AppServiceBase<TEntity, TEntityViewModel> : IAppServiceBase<TEntity, TEntityViewModel>
+    public class AppServiceBase<TEntity, TEntityViewModel> : ICustomerAppService<TEntity, TEntityViewModel>
         where TEntity : EntityBase
         where TEntityViewModel : ViewModelBase
     {

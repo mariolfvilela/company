@@ -30,6 +30,10 @@ namespace Company.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc(options =>
+           options.EnableEndpointRouting = false)
+           .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+
             services.AddControllers();
 
             services.AddDbContext<ContextCompany>(o => o.UseMySql(Configuration.GetConnectionString("Company")));
@@ -46,7 +50,7 @@ namespace Company.API
             services.AddSingleton(mapper);
 
 
-            services.AddMvc();
+            //services.AddMvc();
 
         }
 

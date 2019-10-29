@@ -8,88 +8,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Company.API.Controllers
 {
-    [ApiController]
-    [Produces("application/json")]
-    [Route("[controller]")]
-    public class BaseController<Entity, EntityViewModel> : Controller
+    
+    public abstract class BaseController<Entity, EntityViewModel> : ControllerBase
         where Entity : EntityBase
         where EntityViewModel : ViewModelBase
     {
-        readonly protected IAppServiceBase<Entity, EntityViewModel> app;
+        readonly protected ICustomerAppService<Entity, EntityViewModel> app;
 
-        public BaseController(IAppServiceBase<Entity, EntityViewModel> app)
+        protected BaseController(ICustomerAppService<Entity, EntityViewModel> app)
         {
             this.app = app;
         }
-
-        [HttpGet]
-        [Route("")]
-        public IActionResult GetAll()
-        {
-            try
-            {
-                return new OkObjectResult(app.GetAll());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpGet]
-        [Route("{id}")]
-        public IActionResult GetById(Guid id)
-        {
-            try
-            {
-                return new OkObjectResult(app.GetById(id));
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpPost]
-        public IActionResult Incluir([FromBody] EntityViewModel dado)
-        {
-            try
-            {
-                return new OkObjectResult(app.add(dado));
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpPut]
-        public IActionResult Alterar([FromBody] EntityViewModel dado)
-        {
-            try
-            {
-                app.Update(dado);
-                return new OkObjectResult(true);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpDelete]
-        [Route("{id}")]
-        public IActionResult Excluir(Guid id)
-        {
-            try
-            {
-                app.Remove(id);
-                return new OkObjectResult(true);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        
     }
 }

@@ -14,7 +14,7 @@ namespace Company.CrossCutting.IoC
         public static void Registrar(IServiceCollection svcCollection)
         {
             //Aplicação
-            svcCollection.AddScoped(typeof(IAppServiceBase<,>), typeof(AppServiceBase<,>));
+            svcCollection.AddScoped(typeof(ICustomerAppService<,>), typeof(AppServiceBase<,>));
             svcCollection.AddScoped<ICustomerAppService, CustomerAppService>();
 
             //Domínio

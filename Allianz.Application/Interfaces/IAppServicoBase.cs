@@ -5,7 +5,7 @@ using Company.Domain.Common;
 
 namespace Company.Application.Interfaces
 {
-    public interface IAppServiceBase<TEntityDomain, TEntityViewModel>
+    public interface ICustomerAppService<TEntityDomain, TEntityViewModel>
         where TEntityDomain : EntityBase
         where TEntityViewModel : ViewModelBase
     {
