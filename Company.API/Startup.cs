@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Company.Application;
 using Company.CrossCutting.IoC;
+using Company.Domain.Interfaces.Repositories;
 using Company.Infra.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -37,6 +38,7 @@ namespace Company.API
             services.AddControllers();
 
             services.AddDbContext<ContextCompany>(o => o.UseMySql(Configuration.GetConnectionString("Company")));
+
             InjetorDependency.Registrar(services);
 
             //services.AddAutoMapper(x => x.AddProfile(new MappingEntity()));
@@ -51,6 +53,9 @@ namespace Company.API
 
 
             //services.AddMvc();
+
+            //services.AddMatchingInterface(typeof(IUnitOfWork).Assembly);
+
 
         }
 

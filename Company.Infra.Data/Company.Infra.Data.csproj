@@ -25,4 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Allianz.Domain\Company.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
 </Project>
