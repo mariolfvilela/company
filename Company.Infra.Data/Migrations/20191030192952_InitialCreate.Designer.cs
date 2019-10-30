@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Company.Infra.Data.Migrations
 {
     [DbContext(typeof(ContextCompany))]
-    [Migration("20191030174012_InitialCreate")]
+    [Migration("20191030192952_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,35 +26,9 @@ namespace Company.Infra.Data.Migrations
                         .HasColumnName("ID")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("BirthDate")
-                        .HasColumnName("BirthDate")
-                        .HasColumnType("datetime2(0)");
-
                     b.Property<DateTime>("Created")
                         .HasColumnName("CREATED")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnName("EMAIL")
-                        .HasColumnType("varchar(150)")
-                        .HasMaxLength(150);
-
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnName("LASTMODIFIED")
-                        .HasColumnType("datetime2(0)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnName("NAME")
-                        .HasColumnType("varchar(150)")
-                        .HasMaxLength(150);
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnName("PHONE")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
 

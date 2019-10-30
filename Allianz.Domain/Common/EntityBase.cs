@@ -19,6 +19,6 @@ namespace Company.Domain.Common
         /// <summary>
         /// Data de alteração do registro.
         /// </summary>
-        public DateTime LastModified { get; set; }
+        public DateTime? LastModified { get; set; }
     }
 }
