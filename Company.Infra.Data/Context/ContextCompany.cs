@@ -22,8 +22,11 @@ namespace Company.Infra.Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            //https://medium.com/@speedforcerun/implementing-idesigntimedbcontextfactory-in-asp-net-core-2-0-2-1-3718bba6db84
+
+
             //"server=127.0.0.1;port=8889;database=IdentityDB;user=root;password=<YOUR_PASSWORD>;CharSet=utf8;SslMode=none;"
-            optionsBuilder.UseMySql("server=127.0.0.1;port=3306;database=company;user=root;password=122404M0;CharSet=utf8;SslMode=none;");
+            //optionsBuilder.UseMySql("server=127.0.0.1;port=3306;database=company;user=root;password=122404M0;CharSet=utf8;SslMode=none;");
             //optionsBuilder.UseMySql("server=localhost;port=3306;database=company;uid=root;password=122404M0");
         }
 
