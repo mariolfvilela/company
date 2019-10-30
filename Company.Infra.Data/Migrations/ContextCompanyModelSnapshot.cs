@@ -24,9 +24,35 @@ namespace Company.Infra.Data.Migrations
                         .HasColumnName("ID")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnName("BirthDate")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<DateTime>("Created")
                         .HasColumnName("CREATED")
                         .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnName("EMAIL")
+                        .HasColumnType("varchar(150)")
+                        .HasMaxLength(150);
+
+                    b.Property<DateTime?>("LastModified")
+                        .HasColumnName("LASTMODIFIED")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnName("NAME")
+                        .HasColumnType("varchar(150)")
+                        .HasMaxLength(150);
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnName("PHONE")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 

@@ -16,6 +16,9 @@ namespace Company.Infra.Data.Mappings
                 builder.Property(c => c.Created).IsRequired().HasColumnName("CREATED");
                 builder.Property(c => c.LastModified).HasColumnName("LASTMODIFIED");
             //builder.Property(c => c.LastModified).HasColumnName("LASTMODIFIED").IsRequired().HasColumnType("datetime2(0)");
+
+            ///.NET Core, Identity and MySQL on MacOS
+            //https://dev.to/ijason/net-core-identity-and-mysql-on-macos-4a3i
         }
-        }
+    }
 }

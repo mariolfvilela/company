@@ -14,7 +14,12 @@ namespace Company.Infra.Data.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    CREATED = table.Column<DateTime>(nullable: false)
+                    CREATED = table.Column<DateTime>(nullable: false),
+                    LASTMODIFIED = table.Column<DateTime>(nullable: true),
+                    NAME = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false),
+                    EMAIL = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false),
+                    BirthDate = table.Column<DateTime>(nullable: false),
+                    PHONE = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {

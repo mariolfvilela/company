@@ -14,7 +14,7 @@ namespace Company.Infra.Data.Mappings
             builder.Property(c => c.Name).IsRequired().HasColumnName("NAME").HasColumnType("varchar(150)").HasMaxLength(150);
             builder.Property(c => c.Email).IsRequired().HasColumnName("EMAIL").HasColumnType("varchar(150)").HasMaxLength(150);
             builder.Property(c => c.Phone).IsRequired().HasColumnName("PHONE").HasColumnType("varchar(50)").HasMaxLength(50);
-            builder.Property(c => c.BirthDate).HasColumnName("BirthDate").IsRequired().HasColumnType("datetime2(0)");
+            builder.Property(c => c.BirthDate).HasColumnName("BirthDate").IsRequired();
         }
     }
 }
