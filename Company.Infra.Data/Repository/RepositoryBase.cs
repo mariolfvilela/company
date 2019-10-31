@@ -12,90 +12,71 @@ namespace Company.Infra.Data.Repository
         where TEntity : EntityBase
     {
         protected readonly ContextCompany _context;
+        protected readonly DbSet<TEntity> DbSet;
 
         public RepositoryBase(ContextCompany contexto)
             : base()
         {
-            this._context = contexto;
+            _context = contexto;
+            DbSet = _context.Set<TEntity>();
         }
 
-        public TEntity Add(TEntity entidade)
+        public virtual IQueryable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return DbSet;
         }
 
-        public void Alterar(TEntity entidade)
+        public int SaveChanges()
         {
-            _context.InitTransacao();
-            _context.Set<TEntity>().Attach(entidade);
-            _context.Entry(entidade).State = EntityState.Modified;
-            _context.SendChanges();
+            return _context.SaveChanges();
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _context.Dispose();
+            GC.SuppressFinalize(this);
         }
 
-        public void Excluir(int id)
+        public virtual TEntity Add(TEntity entidade)
         {
-            var entidade = SelecionarPorId(id);
+            //_context.InitTransacao();
+            //entidade = DbSet.Add(entidade).Entity;
+            //_context.SendChanges();
+            //return entidade;
+             DbSet.Add(entidade);
+            return entidade;
+        }
+
+        public virtual void RemoveById(int id)
+        {
+            var entidade = GetById(id);
             if (entidade != null)
             {
                 _context.InitTransacao();
-                _context.Set<TEntity>().Remove(entidade);
+                DbSet.Remove(entidade);
                 _context.SendChanges();
             }
         }
 
-        public void Excluir(TEntity entidade)
+        public virtual void Remove(TEntity entidade)
         {
             _context.InitTransacao();
-            _context.Set<TEntity>().Remove(entidade);
+            DbSet.Remove(entidade);
             _context.SendChanges();
         }
 
-        public IEnumerable<TEntity> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public TEntity GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Incluir(TEntity entidade)
+        public virtual TEntity Update(TEntity entidade)
         {
             _context.InitTransacao();
-            var id = _context.Set<TEntity>().Add(entidade).Entity.Id;
+            DbSet.Attach(entidade);
+            _context.Entry(entidade).State = EntityState.Modified;
             _context.SendChanges();
-            return id;
+            return entidade;
         }
 
-        public void Remove(TEntity entidade)
+        public virtual TEntity GetById(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public TEntity SelecionarPorId(int id)
-        {
-            return _context.Set<TEntity>().Find(id);
-        }
-
-        public IEnumerable<TEntity> SelecionarTodos()
-        {
-            return _context.Set<TEntity>().ToList();
-        }
-
-        public TEntity Update(TEntity entidade)
-        {
-            throw new NotImplementedException();
+            return DbSet.Find(id);
         }
     }
 }

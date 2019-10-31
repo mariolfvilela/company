@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Company.Domain.Common;
 
 namespace Company.Domain.Interfaces.Repositories
@@ -48,6 +49,6 @@ namespace Company.Domain.Interfaces.Repositories
         /// Selecionar todos os registros no banco de dados para uma determinada entidade.
         /// </summary>
         /// <returns>Uma listagem dos registros encontrados.</returns>
-        IEnumerable<TEntity> GetAll();
+        IQueryable<TEntity> GetAll();
     }
 }

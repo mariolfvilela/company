@@ -7,7 +7,7 @@ namespace Company.Application.ViewModels
     public class ViewModelBase
     {
         [Key]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         //[Required(ErrorMessage = "The Created is Required")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]

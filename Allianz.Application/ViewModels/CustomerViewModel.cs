@@ -8,8 +8,8 @@ namespace Company.Application.ViewModels
     {
 
         [Required(ErrorMessage = "The Name is Required")]
-        [MinLength(2)]
-        [MaxLength(100)]
+        [MaxLength(150, ErrorMessage = "Este campo deve conter entre 3 e 60 caracteres")]
+        [MinLength(3, ErrorMessage = "Este campo deve conter entre 3 e 60 caracteres")]
         [DisplayName("Name")]
         public string Name { get; set; }
 

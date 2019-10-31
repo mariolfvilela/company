@@ -13,9 +13,9 @@ namespace Company.API.Controllers
         where Entity : EntityBase
         where EntityViewModel : ViewModelBase
     {
-        readonly protected ICustomerAppService<Entity, EntityViewModel> app;
+        readonly protected IAppServicoBase<Entity, EntityViewModel> app;
 
-        protected BaseController(ICustomerAppService<Entity, EntityViewModel> app)
+        protected BaseController(IAppServicoBase<Entity, EntityViewModel> app)
         {
             this.app = app;
         }

@@ -38,7 +38,7 @@ namespace Company.Domain.Services
 
         public TEntity GetById(int id)
         {
-            throw new NotImplementedException();
+            return _repository.GetById(id);
         }
 
         public Task<IEnumerable<TEntity>> ListAsync()

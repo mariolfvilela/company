@@ -2,14 +2,12 @@
 using AutoMapper;
 using Company.Application.Interfaces;
 using Company.Application.Services;
-using Company.Application.ViewModels;
-using Company.Domain.Entities;
-using Company.Application.Services;
-using Microsoft.Extensions.DependencyInjection;
 using Company.Domain.Services;
 using Company.Domain.Interfaces.Services;
 using Company.Domain.Interfaces.Repositories;
 using Company.Infra.Data.Repository;
+using Company.Domain.Entities;
+using Company.Application.ViewModels;
 
 namespace Company.Application
 {
@@ -20,6 +18,9 @@ namespace Company.Application
             CreateMap<ICustomerService, CustomerService>();
 
             CreateMap<ICustomerRepository, CustomerRepository>();
+
+            CreateMap<CustomerViewModel, Customer>();
+            CreateMap<Customer,CustomerViewModel> ();
         }
             //public static void Registrar(IServiceCollection svcCollection)
             //{

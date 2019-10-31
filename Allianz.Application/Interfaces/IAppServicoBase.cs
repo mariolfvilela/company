@@ -5,15 +5,14 @@ using Company.Domain.Common;
 
 namespace Company.Application.Interfaces
 {
-    public interface ICustomerAppService<TEntityDomain, TEntityViewModel>
-        where TEntityDomain : EntityBase
+    public interface IAppServicoBase<TEntity, TEntityViewModel>
+        where TEntity : EntityBase
         where TEntityViewModel : ViewModelBase
     {
         TEntityViewModel add(TEntityViewModel entityViewModel);
         IEnumerable<TEntityViewModel> GetAll();
-        TEntityViewModel GetById(Guid id);
-        void Update(TEntityViewModel entityViewModel);
-        void Remove(Guid id);
-        IList<TEntityViewModel> GetAllHistory(Guid id);
+        TEntityViewModel GetById(int id);
+        TEntityViewModel Update(TEntityViewModel entityViewModel);
+        void Remove(int id);
     }
 }

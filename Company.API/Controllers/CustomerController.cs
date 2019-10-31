@@ -35,8 +35,8 @@ namespace Company.API.Controllers
         }
 
         [HttpGet]
-        [Route("{id:guid}")]
-        public IActionResult GetById(Guid id)
+        [Route("{id:int}")]
+        public IActionResult GetById(int id)
         {
             try
             {
@@ -77,7 +77,7 @@ namespace Company.API.Controllers
 
         [HttpDelete]
         [Route("{id}")]
-        public IActionResult Excluir(Guid id)
+        public IActionResult Excluir(int id)
         {
             try
             {

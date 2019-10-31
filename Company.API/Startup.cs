@@ -52,7 +52,13 @@ namespace Company.API
             services.AddSingleton(mapper);
 
 
-            //services.AddMvc();
+            services.AddCors(o => o.AddPolicy("Company", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowAnyOrigin();
+            }));
 
             //services.AddMatchingInterface(typeof(IUnitOfWork).Assembly);
 

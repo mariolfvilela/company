@@ -8,86 +8,53 @@ using Company.Domain.Interfaces.Services;
 
 namespace Company.Application.Services
 {
-    public class AppServiceBase<TEntity, TEntityViewModel> : ICustomerAppService<TEntity, TEntityViewModel>
+    public class AppServiceBase<TEntity, TEntityViewModel> : IAppServicoBase<TEntity, TEntityViewModel>
         where TEntity : EntityBase
         where TEntityViewModel : ViewModelBase
     {
         protected readonly IServiceBase<TEntity> _service;
-        protected readonly IMapper iMapper;
+        protected readonly IMapper _mapper;
 
         public AppServiceBase(IMapper iMapper, IServiceBase<TEntity> servico)
             : base()
         {
-            this.iMapper = iMapper;
+            this._mapper = iMapper;
             this._service = servico;
-        }
-
-        public void Alterar(TEntityViewModel entidade)
-        {
-            _service.Update(iMapper.Map<TEntity>(entidade));
-        }
-
-        public void Excluir(int id)
-        {
-            _service.Remove(id);
         }
 
         public void Excluir(TEntityViewModel entidade)
         {
-            _service.Excluir(iMapper.Map<TEntity>(entidade));
+            _service.Excluir(_mapper.Map<TEntity>(entidade));
         }
 
         public IEnumerable<TEntityViewModel> GetAll()
         {
-            return iMapper.Map<IEnumerable<TEntityViewModel>>(_service.GetAll());
+            return _mapper.Map<IEnumerable<TEntityViewModel>>(_service.GetAll());
         }
 
-        public IList<TEntityViewModel> GetAllHistory(Guid id)
+        public TEntityViewModel GetById(int id)
         {
-            throw new NotImplementedException();
+            return _mapper.Map<TEntityViewModel>(_service.GetById(id));
         }
 
-        public TEntityViewModel GetById(Guid id)
+        public void Remove(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public int Incluir(TEntityViewModel entidade)
-        {
-            throw new NotImplementedException();
-            // return _service.Excluir(iMapper.Map<TEntity>(entidade));
-        }
-
-        public TEntityViewModel add(TEntityViewModel entityViewModel)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public TEntityViewModel SelecionarPorId(int id)
-        {
-            throw new NotImplementedException();
-            //return iMapper.Map<TEntityViewModel>(_service.SelecionarPorId(id));
-        }
-
-        public IEnumerable<TEntityViewModel> SelecionarTodos()
-        {
-            throw new NotImplementedException();
-            //return iMapper.Map<IEnumerable<TEntityViewModel>>(_service.SelecionarTodos());
-        }
-
-        public void Update(TEntityViewModel entityViewModel)
-        {
-            throw new NotImplementedException();
+            _service.Remove(id);
         }
 
         public void Dispose()
         {
             GC.SuppressFinalize(this);
+        }
+
+        public TEntityViewModel add(TEntityViewModel entityViewModel)
+        {
+            return _mapper.Map<TEntityViewModel>(_service.Add(_mapper.Map<TEntity>(entityViewModel)));
+        }
+
+        public TEntityViewModel Update(TEntityViewModel entityViewModel)
+        {
+            return _mapper.Map<TEntityViewModel>(_service.Update(_mapper.Map<TEntity>(entityViewModel)));
         }
     }
 }

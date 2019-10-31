@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Linq;
 using Company.Domain.Entities;
 using Company.Domain.Interfaces.Repositories;
 using Company.Infra.Data.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace Company.Infra.Data.Repository
 {
@@ -14,7 +16,7 @@ namespace Company.Infra.Data.Repository
 
         public Customer GetByEmail(string email)
         {
-            throw new NotImplementedException();
+            return DbSet.AsNoTracking().FirstOrDefault(c => c.Email == email);
         }
     }
 }
