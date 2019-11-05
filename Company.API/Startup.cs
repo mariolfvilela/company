@@ -21,11 +21,12 @@ namespace Company.API
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
+            _env = env;
             Configuration = configuration;
         }
-
+        private readonly IWebHostEnvironment _env;
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -37,11 +38,18 @@ namespace Company.API
 
             services.AddControllers();
 
-            services.AddDbContext<ContextCompany>(o => o.UseMySql(Configuration.GetConnectionString("Company")));
+            //services.AddDbContext<ContextCompany>(o => o.UseMySql(Configuration.GetConnectionString("Company")));
+            services.AddDbContextPool<ContextCompany>(builder =>
+            {
+                if (_env.IsDevelopment())
+                    builder.EnableSensitiveDataLogging(true);
+
+                var connStr = this.Configuration.GetConnectionString("Company");
+                builder.UseMySql(connStr);
+            });
 
             InjetorDependency.Registrar(services);
 
-            //services.AddAutoMapper(x => x.AddProfile(new MappingEntity()));
             // Auto Mapper Configurations
             var mappingConfig = new MapperConfiguration(mc =>
             {

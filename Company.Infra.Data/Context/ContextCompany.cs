@@ -16,8 +16,9 @@ namespace Company.Infra.Data.Context
         public ContextCompany(DbContextOptions<ContextCompany> options)
             : base(options)
         {
-            if (Database.GetPendingMigrations().Count() > 0)
-                Database.Migrate();
+            Database.EnsureCreated();
+            //if (Database.GetPendingMigrations().Count() > 0)
+            //Database.Migrate();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -107,6 +108,7 @@ namespace Company.Infra.Data.Context
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new CustomerMap());
+            modelBuilder.ApplyConfiguration(new ProductMap());
         }
 
     }

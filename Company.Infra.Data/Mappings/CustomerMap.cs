@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Company.Infra.Data.Mappings
 {
-    public class CustomerMap : MapBase<Customer>
+    internal class CustomerMap : MapBase<Customer>
     {
         public override void Configure(EntityTypeBuilder<Customer> builder)
         {

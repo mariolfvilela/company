@@ -14,11 +14,11 @@ namespace Company.Domain.Common
         /// <summary>
         /// Data de criação do registro.
         /// </summary>
-        public DateTime Created { get; set; }
+        public DateTime CreationDate { get; set; }
 
         /// <summary>
         /// Data de alteração do registro.
         /// </summary>
-        public DateTime? LastModified { get; set; }
+        public DateTime? LastModifiedDate { get; set; }
     }
 }
