@@ -14,8 +14,8 @@ namespace Company.CrossCutting.IoC
         public static void Registrar(IServiceCollection svcCollection)
         {
             //Aplicação
-            svcCollection.AddScoped(typeof(IAppServicoBase<,>), typeof(AppServiceBase<,>));
-            svcCollection.AddScoped<ICustomerAppService, CustomerAppService>();
+            svcCollection.AddTransient(typeof(IAppServicoBase<,>), typeof(AppServiceBase<,>));
+            svcCollection.AddTransient<ICustomerAppService, CustomerAppService>();
 
             //Domínio
             svcCollection.AddScoped(typeof(IServiceBase<>), typeof(ServiceBase<>));
@@ -24,6 +24,11 @@ namespace Company.CrossCutting.IoC
             //Repositorio
             svcCollection.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
             svcCollection.AddScoped<ICustomerRepository, CustomerRepository>();
+
+
+            // https://balta.io/blog/aspnet-core-dependency-injection
+            // AddScoped
+            // AddTransient
         }
     }
 }

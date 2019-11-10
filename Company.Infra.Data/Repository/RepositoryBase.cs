@@ -39,11 +39,10 @@ namespace Company.Infra.Data.Repository
 
         public virtual TEntity Add(TEntity entidade)
         {
-            //_context.InitTransacao();
-            //entidade = DbSet.Add(entidade).Entity;
-            //_context.SendChanges();
-            //return entidade;
-             DbSet.Add(entidade);
+            _context.InitTransacao();
+            entidade = DbSet.Add(entidade).Entity;
+            _context.SendChanges();
+             //DbSet.Add(entidade);
             return entidade;
         }
 

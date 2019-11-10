@@ -38,28 +38,28 @@ namespace Company.Infra.Data.Context
         }
 
         public override int SaveChanges()
-        {
-            foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("Created") != null))
+        {            
+            foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("CreationDate") != null))
             {
                 if (entry.State == EntityState.Added)
                 {
-                    entry.Property("Created").CurrentValue = DateTime.Now;
+                    entry.Property("CreationDate").CurrentValue = DateTime.Now;
                 }
                 else if (entry.State == EntityState.Modified)
                 {
-                    entry.Property("Created").IsModified = false;
+                    entry.Property("CreationDate").IsModified = false;
                 }
             };
 
-            foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("LastModified") != null))
+            foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("LastModifiedDate") != null))
             {
                 if (entry.State == EntityState.Modified)
                 {
-                    entry.Property("LastModified").CurrentValue = DateTime.Now;
+                    entry.Property("LastModifiedDate").CurrentValue = DateTime.Now;
                 }
                 else if (entry.State == EntityState.Added)
                 {
-                    entry.Property("LastModified").IsModified = false;
+                    entry.Property("LastModifiedDate").IsModified = false;
                 }
             };
             return base.SaveChanges();

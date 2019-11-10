@@ -23,5 +23,11 @@ namespace Company.Application.ViewModels
         [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         [DisplayName("Birth Date")]
         public DateTime BirthDate { get; set; }
+
+        [Required(ErrorMessage = "The Phone is Required")]
+        [MaxLength(150, ErrorMessage = "Este campo deve conter entre 3 e 60 caracteres")]
+        [MinLength(1, ErrorMessage = "Este campo deve conter entre 1 e 60 caracteres")]
+        [DisplayName("Phone")]
+        public string Phone { get; set; }
     }
 }

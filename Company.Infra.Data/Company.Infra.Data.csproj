@@ -21,6 +21,7 @@
     <Folder Include="Context\" />
     <Folder Include="Mappings\" />
     <Folder Include="Repository\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Allianz.Domain\Company.Domain.csproj" />

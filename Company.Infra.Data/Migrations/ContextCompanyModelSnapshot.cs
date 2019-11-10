@@ -28,7 +28,7 @@ namespace Company.Infra.Data.Migrations
                         .HasColumnName("BirthDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<DateTime>("Created")
+                    b.Property<DateTime>("CreationDate")
                         .HasColumnName("CREATED")
                         .HasColumnType("datetime(6)");
 
@@ -38,7 +38,7 @@ namespace Company.Infra.Data.Migrations
                         .HasColumnType("varchar(150)")
                         .HasMaxLength(150);
 
-                    b.Property<DateTime?>("LastModified")
+                    b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnName("LASTMODIFIED")
                         .HasColumnType("datetime(6)");
 
@@ -57,6 +57,26 @@ namespace Company.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Customer");
+                });
+
+            modelBuilder.Entity("Company.Domain.Entities.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("ID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnName("CREATED")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnName("LASTMODIFIED")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Product");
                 });
 #pragma warning restore 612, 618
         }
