@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Company.Application.AutoMapper;
 using AutoMapper;
 using Company.Application;
 using Company.CrossCutting.IoC;
