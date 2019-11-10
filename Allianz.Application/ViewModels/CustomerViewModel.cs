@@ -4,14 +4,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Company.Application.ViewModels
 {
-    public class CustomerViewModel
+    public class CustomerViewModel : ViewModelBase
     {
-        [Key]
-        public Guid Id { get; set; }
 
         [Required(ErrorMessage = "The Name is Required")]
-        [MinLength(2)]
-        [MaxLength(100)]
+        [MaxLength(150, ErrorMessage = "Este campo deve conter entre 3 e 60 caracteres")]
+        [MinLength(3, ErrorMessage = "Este campo deve conter entre 3 e 60 caracteres")]
         [DisplayName("Name")]
         public string Name { get; set; }
 
@@ -25,5 +23,11 @@ namespace Company.Application.ViewModels
         [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         [DisplayName("Birth Date")]
         public DateTime BirthDate { get; set; }
+
+        [Required(ErrorMessage = "The Phone is Required")]
+        [MaxLength(150, ErrorMessage = "Este campo deve conter entre 3 e 60 caracteres")]
+        [MinLength(1, ErrorMessage = "Este campo deve conter entre 1 e 60 caracteres")]
+        [DisplayName("Phone")]
+        public string Phone { get; set; }
     }
 }

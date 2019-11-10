@@ -6,9 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Program.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Common\" />
     <Folder Include="Interfaces\" />
@@ -17,5 +14,6 @@
     <Folder Include="ValueObjects\" />
     <Folder Include="Interfaces\Repositories\" />
     <Folder Include="Interfaces\Services\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

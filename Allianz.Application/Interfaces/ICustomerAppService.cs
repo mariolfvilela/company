@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Allianz.Application.ViewModels;
-using Company.Application.Interfaces;
+﻿using Company.Application.ViewModels;
 using Company.Domain.Entities;
 
 namespace Company.Application.Interfaces

@@ -6,16 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="AutoMapper\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Allianz.Domain\Company.Domain.csproj" />
+    <ProjectReference Include="..\Allianz.Application\Company.Application.csproj" />
     <ProjectReference Include="..\Company.Infra.Data\Company.Infra.Data.csproj" />
   </ItemGroup>
 </Project>
