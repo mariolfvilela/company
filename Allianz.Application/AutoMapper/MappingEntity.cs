@@ -1,14 +1,15 @@
 ﻿using System;
+using AutoMapper;
 using Company.Application.ViewModels;
 using Company.Domain.Entities;
-using AutoMapper;
 
 namespace Company.Application.AutoMapper
 {
-    public class DomainToViewModelMappingProfile : Profile
+    public class MappingEntity : Profile
     {
-        public DomainToViewModelMappingProfile()
+        public MappingEntity()
         {
+            CreateMap<CustomerViewModel, Customer>();
             CreateMap<Customer, CustomerViewModel>();
         }
     }

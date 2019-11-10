@@ -17,6 +17,8 @@ namespace Company.CrossCutting.IoC
             svcCollection.AddTransient(typeof(IAppServicoBase<,>), typeof(AppServiceBase<,>));
             svcCollection.AddTransient<ICustomerAppService, CustomerAppService>();
 
+            svcCollection.AddTransient<IStarshipAppService, StarshipAppService>();
+
             //Domínio
             svcCollection.AddScoped(typeof(IServiceBase<>), typeof(ServiceBase<>));
             svcCollection.AddScoped<ICustomerService, CustomerService>();
