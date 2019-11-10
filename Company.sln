@@ -1,9 +1,9 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Domain", "01 - Domain", "{7F0DE793-A80A-4D46-88AD-670B80915835}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Domain", "03 - Domain", "{7F0DE793-A80A-4D46-88AD-670B80915835}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Application", "03 - Application", "{CD608AD4-4FF0-4E94-9099-5EBEBFA7D932}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Application", "02 - Application", "{CD608AD4-4FF0-4E94-9099-5EBEBFA7D932}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Domain", "Allianz.Domain\Company.Domain.csproj", "{2A018DB0-C091-4E34-A7C1-12D6613EE918}"
 EndProject
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Application", "Alli
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Infra", "04 - Infra", "{86929BF4-E3F2-4886-9BB1-406063C5E6A2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Presentation", "05 - Presentation", "{135A8EDE-D66E-4567-8552-BE3C13CDC594}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Presentation", "01 - Presentation", "{135A8EDE-D66E-4567-8552-BE3C13CDC594}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 - Lib", "06 - Lib", "{880360E1-6CCC-4669-80BD-DB867937CB01}"
 EndProject
