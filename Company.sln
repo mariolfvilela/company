@@ -1,17 +1,17 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Domain", "03 - Domain", "{7F0DE793-A80A-4D46-88AD-670B80915835}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Domain", "04 - Domain", "{7F0DE793-A80A-4D46-88AD-670B80915835}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Application", "02 - Application", "{CD608AD4-4FF0-4E94-9099-5EBEBFA7D932}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Application", "03 - Application", "{CD608AD4-4FF0-4E94-9099-5EBEBFA7D932}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Domain", "Allianz.Domain\Company.Domain.csproj", "{2A018DB0-C091-4E34-A7C1-12D6613EE918}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Application", "Allianz.Application\Company.Application.csproj", "{7FE6A31E-F568-4D25-9C3E-8288B2BD7B98}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Infra", "04 - Infra", "{86929BF4-E3F2-4886-9BB1-406063C5E6A2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Infra", "05 - Infra", "{86929BF4-E3F2-4886-9BB1-406063C5E6A2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Presentation", "01 - Presentation", "{135A8EDE-D66E-4567-8552-BE3C13CDC594}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Service", "02 - Service", "{135A8EDE-D66E-4567-8552-BE3C13CDC594}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 - Lib", "06 - Lib", "{880360E1-6CCC-4669-80BD-DB867937CB01}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.API", "Company.API\Company.API.csproj", "{FE356489-9D6C-4CCB-9A2F-530E6A9D7E94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Lib", "Company.Lib\Company.Lib.csproj", "{A0C87898-F216-4DD7-B64C-5BE5AB656465}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Presentation", "01 - Presentation", "{CDC52D9A-16B9-4F8C-BD7C-5172178E5EA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
