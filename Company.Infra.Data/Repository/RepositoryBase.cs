@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Company.Domain.Common;
 using Company.Domain.Interfaces.Repositories;
 using Company.Infra.Data.Context;
@@ -37,13 +38,13 @@ namespace Company.Infra.Data.Repository
             GC.SuppressFinalize(this);
         }
 
-        public virtual TEntity Add(TEntity entidade)
+        public virtual int Add(TEntity entidade)
         {
             _context.InitTransacao();
-            entidade = DbSet.Add(entidade).Entity;
+            int id = DbSet.Add(entidade).Entity.Id;
             _context.SendChanges();
              //DbSet.Add(entidade);
-            return entidade;
+            return id;
         }
 
         public virtual void RemoveById(int id)
@@ -76,6 +77,17 @@ namespace Company.Infra.Data.Repository
         public virtual TEntity GetById(int id)
         {
             return DbSet.Find(id);
+        }
+
+
+        public virtual async Task<TEntity> GetByIdAsync(int id)
+        {
+            return await DbSet.FindAsync(id);
+        }
+
+        public virtual async Task<IEnumerable<TEntity>> ListAsync()
+        {
+            return await DbSet.ToListAsync();
         }
     }
 }

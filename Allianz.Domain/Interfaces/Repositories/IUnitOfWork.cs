@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Threading.Tasks;
+
 namespace Company.Domain.Interfaces.Repositories
 {
     public interface IUnitOfWork : IDisposable
     {
-        bool Commit();
+        Task<int> CommitAsync();
     }
 }

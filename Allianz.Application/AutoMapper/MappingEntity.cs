@@ -9,7 +9,10 @@ namespace Company.Application.AutoMapper
     {
         public MappingEntity()
         {
+            // Application to Domain
             CreateMap<CustomerViewModel, Customer>();
+
+            // Domain to Resource
             CreateMap<Customer, CustomerViewModel>();
         }
     }

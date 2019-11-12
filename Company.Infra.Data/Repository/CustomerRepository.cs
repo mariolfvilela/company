@@ -16,7 +16,7 @@ namespace Company.Infra.Data.Repository
 
         public Customer GetByEmail(string email)
         {
-            return DbSet.AsNoTracking().FirstOrDefault(c => c.Email == email);
+            return GetAll().AsNoTracking().FirstOrDefault(c => c.Email == email);
         }
     }
 }

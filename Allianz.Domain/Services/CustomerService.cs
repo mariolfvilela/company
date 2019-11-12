@@ -7,8 +7,8 @@ namespace Company.Domain.Services
 {
     public class CustomerService : ServiceBase<Customer>, ICustomerService
     {
-        public CustomerService(ICustomerRepository repository)
-            : base(repository)
+        public CustomerService(ICustomerRepository repository, IUnitOfWork unitOfWork)
+            : base(repository, unitOfWork)
         {
 
         }

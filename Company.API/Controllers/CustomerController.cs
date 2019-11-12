@@ -20,76 +20,6 @@ namespace Company.API.Controllers
             : base(app)
         { }
 
-        [HttpGet]
-        [Route("")]
-        public IActionResult GetAll()
-        {
-            try
-            {
-                return new OkObjectResult(app.GetAll());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpGet]
-        [Route("{id:int}")]
-        public IActionResult GetById(int id)
-        {
-            try
-            {
-                return new OkObjectResult(app.GetById(id));
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpPost]
-        public IActionResult Incluir([FromBody] CustomerViewModel dado)
-        {
-            try
-            {
-                return new OkObjectResult(app.add(dado));
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpPut]
-        public IActionResult Alterar([FromBody] CustomerViewModel dado)
-        {
-            try
-            {
-                app.Update(dado);
-                return new OkObjectResult(true);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpDelete]
-        [Route("{id}")]
-        public IActionResult Excluir(int id)
-        {
-            try
-            {
-                app.Remove(id);
-                return new OkObjectResult(true);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
         // [Authorize("Bearer")]
         [AllowAnonymous]
         [HttpGet]
@@ -101,22 +31,6 @@ namespace Company.API.Controllers
                     new CustomerViewModel()
                     { }
                     );
-        }
-
-        
-
-        // GET: api/Customer/5
-        [HttpGet("teste/{id}")]
-        public async Task<ActionResult<Customer>> GetTodoItem(long id)
-        {
-            var todoItem = 0;//await _context.TodoItems.FindAsync(id);
-
-            if (todoItem == null)
-            {
-                return NotFound();
-            }
-
-            return new OkObjectResult(0);// todoItem;
         }
     }
 }

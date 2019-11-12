@@ -14,11 +14,8 @@ namespace Company.API.Controllers
     [ApiController]
     [Produces("application/json")]
     [Route("[controller]")]
-    public class WeatherForecastController : BaseController<Customer, CustomerViewModel>
+    public class WeatherForecastController : Controller
     {
-        public WeatherForecastController(ICustomerAppService app)
-            : base(app)
-        { }
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
