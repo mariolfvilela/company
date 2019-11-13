@@ -16,4 +16,7 @@
     <Folder Include="Interfaces\Services\" />
     <Folder Include="Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNetCore.Objects" Version="9.22.0" />
+  </ItemGroup>
 </Project>
