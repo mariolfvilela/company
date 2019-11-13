@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Company.Domain.Common;
+using Company.Domain.Entities;
 
 namespace Company.Domain.Interfaces.Repositories
 {
@@ -52,6 +53,6 @@ namespace Company.Domain.Interfaces.Repositories
         /// </summary>
         /// <returns>Uma listagem dos registros encontrados.</returns>
         //IQueryable<TEntity> GetAll();
-        Task<IEnumerable<TEntity>> ListAsync();
+        Task<IEnumerable<TEntity>> ListAsync();        
     }
 }

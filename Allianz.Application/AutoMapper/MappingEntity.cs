@@ -11,9 +11,11 @@ namespace Company.Application.AutoMapper
         {
             // Application to Domain
             CreateMap<CustomerViewModel, Customer>();
+            CreateMap<UserViewModel, User>();
 
             // Domain to Resource
             CreateMap<Customer, CustomerViewModel>();
+            CreateMap<User, UserViewModel>();
         }
     }
 }
