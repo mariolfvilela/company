@@ -7,12 +7,12 @@ namespace Company.Infra.Data.Mappings
 {
     internal class MapBase<T> : IEntityTypeConfiguration<T>
         where T : EntityBase
-        {
+    {
             public virtual void Configure(EntityTypeBuilder<T> builder)
             {
                 builder.HasKey(c => c.Id);
 
-                builder.Property(c => c.Id).IsRequired().HasColumnName("ID");
+                builder.Property(c => c.Id).IsRequired().UseMySqlIdentityColumn().HasColumnName("ID");
                 builder.Property(c => c.CreationDate).IsRequired().HasColumnName("CREATED");
                 builder.Property(c => c.LastModifiedDate).HasColumnName("LASTMODIFIED");
             //builder.Property(c => c.LastModified).HasColumnName("LASTMODIFIED").IsRequired().HasColumnType("datetime2(0)");

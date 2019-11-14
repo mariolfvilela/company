@@ -29,7 +29,7 @@ namespace Company.API.Controllers
             if (user == null)
                 return NotFound(new { message = "Username or password is invalid" });
 
-            var token = TokenService.GenerateToken(user, iconfiguration);
+            string token = TokenService.GenerateToken(user, iconfiguration);
             return new
             {
                 user = user,

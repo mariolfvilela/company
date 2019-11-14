@@ -24,6 +24,9 @@ namespace Company.Infra.Data.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //https://medium.com/@speedforcerun/implementing-idesigntimedbcontextfactory-in-asp-net-core-2-0-2-1-3718bba6db84
+            // Then you can start to do migrations:
+            // dotnet ef migrations add InitialCreate
+            // dotnet ef database update
 
 
             //"server=127.0.0.1;port=8889;database=IdentityDB;user=root;password=<YOUR_PASSWORD>;CharSet=utf8;SslMode=none;"
@@ -109,6 +112,7 @@ namespace Company.Infra.Data.Context
 
             modelBuilder.ApplyConfiguration(new CustomerMap());
             modelBuilder.ApplyConfiguration(new ProductMap());
+            modelBuilder.ApplyConfiguration(new UserMap());
         }
 
     }

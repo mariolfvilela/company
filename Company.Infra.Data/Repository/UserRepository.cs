@@ -27,7 +27,7 @@ namespace Company.Infra.Data.Repository
         {
             var users = new List<User>();
             users.Add(new User { Id = 1, Username = "batman", Password = "batman", Roles = Roles.Admin });
-            users.Add(new User { Id = 2, Username = "robin", Password = "robin", Role = Roles.User });
+            users.Add(new User { Id = 2, Username = "robin", Password = "robin", Roles = Roles.User });
             return users;            
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Company.Domain.Enums;
 
 namespace Company.Application.ViewModels
 {
@@ -18,6 +19,23 @@ namespace Company.Application.ViewModels
         [DisplayName("Password")]
         public string Password { get; set; }
 
-        public string Role { get; set; }
+        public Roles Roles { get; set; }
+
+        /// <summary>
+        /// Description of Roles
+        /// </summary>
+        public string RolesDescription
+        {
+            get
+            {
+                switch (Roles)
+                {
+                    case Roles.Admin: return "manager";
+                    case Roles.User: return "employee";
+                    case Roles.None: return "None";
+                    default: return string.Empty;
+                }
+            }
+        }
     }
 }

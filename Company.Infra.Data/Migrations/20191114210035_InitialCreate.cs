@@ -39,6 +39,23 @@ namespace Company.Infra.Data.Migrations
                 {
                     table.PrimaryKey("PK_Product", x => x.ID);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "User",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CREATED = table.Column<DateTime>(nullable: false),
+                    LASTMODIFIED = table.Column<DateTime>(nullable: true),
+                    Username = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false),
+                    Password = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false),
+                    Roles = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_User", x => x.ID);
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -48,6 +65,9 @@ namespace Company.Infra.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Product");
+
+            migrationBuilder.DropTable(
+                name: "User");
         }
     }
 }

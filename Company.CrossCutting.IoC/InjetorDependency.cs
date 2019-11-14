@@ -22,9 +22,9 @@ namespace Company.CrossCutting.IoC
             svcCollection.AddTransient<IStarshipAppService, StarshipAppService>();
 
             //Domínio
-            svcCollection.AddScoped(typeof(IServiceBase<>), typeof(ServiceBase<>));
-            svcCollection.AddScoped<ICustomerService, CustomerService>();
-            svcCollection.AddScoped<IUserService, UserService>();
+            svcCollection.AddTransient(typeof(IServiceBase<>), typeof(ServiceBase<>));
+            svcCollection.AddTransient<ICustomerService, CustomerService>();
+            svcCollection.AddTransient<IUserService, UserService>();
 
             //Repositorio
             svcCollection.AddScoped<IUnitOfWork, UnitOfWork>();

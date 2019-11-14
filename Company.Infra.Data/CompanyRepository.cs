@@ -21,8 +21,8 @@ namespace Company.Infra.Data
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("creating customer...");
 
-            _dbContext.Customers.Add(customer);
-            await _dbContext.SaveChangesAsync();
+            //_dbContext.Customers.Add(customer);
+            //await _dbContext.SaveChangesAsync();
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"customer {customer.Id} created!");
