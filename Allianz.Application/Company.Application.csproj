@@ -10,9 +10,11 @@
     <Folder Include="Interfaces\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Services\" />
+    <Folder Include="Validation\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="DotNetCore.Validation" Version="9.22.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Allianz.Domain\Company.Domain.csproj" />
