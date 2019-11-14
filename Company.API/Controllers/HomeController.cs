@@ -30,11 +30,11 @@ namespace Company.API.Controllers
                 return NotFound(new { message = "Username or password is invalid" });
 
             string token = TokenService.GenerateToken(user, iconfiguration);
-            return new
+            return new OkObjectResult(new
             {
                 user = user,
                 token = token
-            };
+            });
         }
 
         [HttpGet]
